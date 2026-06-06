@@ -57,7 +57,7 @@ jobs:
       - name: Build Docker Model
         run: |
           # Menggunakan fungsi mlflow build-docker sesuai kriteria advance
-          mlflow models build-docker -m "mlruns/0/${{ env.MLFLOW_RUN_ID }}/artifacts/model" -n temp-image-model
+          mlflow models build-docker -m MLProject/model_output -n temp-image-model
 
       - name: Tag Docker Image
         run: |
