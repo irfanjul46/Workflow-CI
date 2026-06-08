@@ -8,18 +8,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
 def main():
-    # 1. Dapatkan jalur folder TEPAT di mana file modelling.py ini berada
+    # 1. Dapatkan lokasi absolut skrip ini secara dinamis
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # 2. Gabungkan folder tersebut HANYA dengan 'preprocessing' dan nama file CSV
-    # Jangan tambahkan 'MLProject' di dalamnya!
+    # 2. LANGSUNG gabungkan dengan folder 'preprocessing'
+    # DILARANG KERAS menyisipkan kata 'MLProject' di dalam os.path.join ini!
     data_path = os.path.join(script_dir, 'preprocessing', 'football_preprocessing.csv')
     
     print(f"Mencari data di: {data_path}")
     
     if not os.path.exists(data_path):
-        raise FileNotFoundError(f"File tidak ditemukan di jalur: {data_path}")
-    
+        raise FileNotFoundError(f"File CSV tidak ditemukan di: {data_path}")
+        
     df = pd.read_csv(data_path)
     
     y = df['goals']
