@@ -1,0 +1,123 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 2.18.0
+model_size_bytes: 4295730
+model_uuid: 476b2c74851a487786d8f9b930c86044
+run_id: 165879d73f884ef59c733ed749c23365
+signature:
+  inputs: '[{"type": "double", "name": "age", "required": true}, {"type": "double",
+    "name": "mp", "required": true}, {"type": "double", "name": "starts", "required":
+    true}, {"type": "double", "name": "min", "required": true}, {"type": "double",
+    "name": "90s", "required": true}, {"type": "double", "name": "shots", "required":
+    true}, {"type": "double", "name": "sot", "required": true}, {"type": "double",
+    "name": "sot%", "required": true}, {"type": "double", "name": "g/sh", "required":
+    true}, {"type": "double", "name": "g/sot", "required": true}, {"type": "double",
+    "name": "shodist", "required": true}, {"type": "double", "name": "shofk", "required":
+    true}, {"type": "double", "name": "shopk", "required": true}, {"type": "double",
+    "name": "pkatt", "required": true}, {"type": "double", "name": "pastotcmp", "required":
+    true}, {"type": "double", "name": "pastotatt", "required": true}, {"type": "double",
+    "name": "pastotcmp%", "required": true}, {"type": "double", "name": "pastotdist",
+    "required": true}, {"type": "double", "name": "pastotprgdist", "required": true},
+    {"type": "double", "name": "passhocmp", "required": true}, {"type": "double",
+    "name": "passhoatt", "required": true}, {"type": "double", "name": "passhocmp%",
+    "required": true}, {"type": "double", "name": "pasmedcmp", "required": true},
+    {"type": "double", "name": "pasmedatt", "required": true}, {"type": "double",
+    "name": "pasmedcmp%", "required": true}, {"type": "double", "name": "pasloncmp",
+    "required": true}, {"type": "double", "name": "paslonatt", "required": true},
+    {"type": "double", "name": "pasloncmp%", "required": true}, {"type": "double",
+    "name": "assists", "required": true}, {"type": "double", "name": "pasass", "required":
+    true}, {"type": "double", "name": "pas3rd", "required": true}, {"type": "double",
+    "name": "ppa", "required": true}, {"type": "double", "name": "crspa", "required":
+    true}, {"type": "double", "name": "pasprog", "required": true}, {"type": "double",
+    "name": "pasatt", "required": true}, {"type": "double", "name": "paslive", "required":
+    true}, {"type": "double", "name": "pasdead", "required": true}, {"type": "double",
+    "name": "pasfk", "required": true}, {"type": "double", "name": "tb", "required":
+    true}, {"type": "double", "name": "paspress", "required": true}, {"type": "double",
+    "name": "sw", "required": true}, {"type": "double", "name": "pascrs", "required":
+    true}, {"type": "double", "name": "ck", "required": true}, {"type": "double",
+    "name": "ckin", "required": true}, {"type": "double", "name": "ckout", "required":
+    true}, {"type": "double", "name": "ckstr", "required": true}, {"type": "double",
+    "name": "pasground", "required": true}, {"type": "double", "name": "paslow", "required":
+    true}, {"type": "double", "name": "pashigh", "required": true}, {"type": "double",
+    "name": "paswleft", "required": true}, {"type": "double", "name": "paswright",
+    "required": true}, {"type": "double", "name": "paswhead", "required": true}, {"type":
+    "double", "name": "ti", "required": true}, {"type": "double", "name": "paswother",
+    "required": true}, {"type": "double", "name": "pascmp", "required": true}, {"type":
+    "double", "name": "pasoff", "required": true}, {"type": "double", "name": "pasout",
+    "required": true}, {"type": "double", "name": "pasint", "required": true}, {"type":
+    "double", "name": "pasblocks", "required": true}, {"type": "double", "name": "sca",
+    "required": true}, {"type": "double", "name": "scapasslive", "required": true},
+    {"type": "double", "name": "scapassdead", "required": true}, {"type": "double",
+    "name": "scadrib", "required": true}, {"type": "double", "name": "scash", "required":
+    true}, {"type": "double", "name": "scafld", "required": true}, {"type": "double",
+    "name": "scadef", "required": true}, {"type": "double", "name": "gca", "required":
+    true}, {"type": "double", "name": "gcapasslive", "required": true}, {"type": "double",
+    "name": "gcapassdead", "required": true}, {"type": "double", "name": "gcadrib",
+    "required": true}, {"type": "double", "name": "gcash", "required": true}, {"type":
+    "double", "name": "gcafld", "required": true}, {"type": "double", "name": "gcadef",
+    "required": true}, {"type": "double", "name": "tkl", "required": true}, {"type":
+    "double", "name": "tklwon", "required": true}, {"type": "double", "name": "tkldef3rd",
+    "required": true}, {"type": "double", "name": "tklmid3rd", "required": true},
+    {"type": "double", "name": "tklatt3rd", "required": true}, {"type": "double",
+    "name": "tkldri", "required": true}, {"type": "double", "name": "tkldriatt", "required":
+    true}, {"type": "double", "name": "tkldri%", "required": true}, {"type": "double",
+    "name": "tkldripast", "required": true}, {"type": "double", "name": "press", "required":
+    true}, {"type": "double", "name": "pressucc", "required": true}, {"type": "double",
+    "name": "press%", "required": true}, {"type": "double", "name": "presdef3rd",
+    "required": true}, {"type": "double", "name": "presmid3rd", "required": true},
+    {"type": "double", "name": "presatt3rd", "required": true}, {"type": "double",
+    "name": "blocks", "required": true}, {"type": "double", "name": "blksh", "required":
+    true}, {"type": "double", "name": "blkshsv", "required": true}, {"type": "double",
+    "name": "blkpass", "required": true}, {"type": "double", "name": "int", "required":
+    true}, {"type": "double", "name": "tkl+int", "required": true}, {"type": "double",
+    "name": "clr", "required": true}, {"type": "double", "name": "err", "required":
+    true}, {"type": "double", "name": "touches", "required": true}, {"type": "double",
+    "name": "toudefpen", "required": true}, {"type": "double", "name": "toudef3rd",
+    "required": true}, {"type": "double", "name": "toumid3rd", "required": true},
+    {"type": "double", "name": "touatt3rd", "required": true}, {"type": "double",
+    "name": "touattpen", "required": true}, {"type": "double", "name": "toulive",
+    "required": true}, {"type": "double", "name": "drisucc", "required": true}, {"type":
+    "double", "name": "driatt", "required": true}, {"type": "double", "name": "drisucc%",
+    "required": true}, {"type": "double", "name": "dripast", "required": true}, {"type":
+    "double", "name": "drimegs", "required": true}, {"type": "double", "name": "carries",
+    "required": true}, {"type": "double", "name": "cartotdist", "required": true},
+    {"type": "double", "name": "carprgdist", "required": true}, {"type": "double",
+    "name": "carprog", "required": true}, {"type": "double", "name": "car3rd", "required":
+    true}, {"type": "double", "name": "cpa", "required": true}, {"type": "double",
+    "name": "carmis", "required": true}, {"type": "double", "name": "cardis", "required":
+    true}, {"type": "double", "name": "rectarg", "required": true}, {"type": "double",
+    "name": "rec", "required": true}, {"type": "double", "name": "rec%", "required":
+    true}, {"type": "double", "name": "recprog", "required": true}, {"type": "double",
+    "name": "crdy", "required": true}, {"type": "double", "name": "crdr", "required":
+    true}, {"type": "double", "name": "2crdy", "required": true}, {"type": "double",
+    "name": "fls", "required": true}, {"type": "double", "name": "fld", "required":
+    true}, {"type": "double", "name": "off", "required": true}, {"type": "double",
+    "name": "crs", "required": true}, {"type": "double", "name": "tklw", "required":
+    true}, {"type": "double", "name": "pkwon", "required": true}, {"type": "double",
+    "name": "pkcon", "required": true}, {"type": "double", "name": "og", "required":
+    true}, {"type": "double", "name": "recov", "required": true}, {"type": "double",
+    "name": "aerwon", "required": true}, {"type": "double", "name": "aerlost", "required":
+    true}, {"type": "double", "name": "aerwon%", "required": true}, {"type": "boolean",
+    "name": "pos_DFFW", "required": true}, {"type": "boolean", "name": "pos_DFMF",
+    "required": true}, {"type": "boolean", "name": "pos_FW", "required": true}, {"type":
+    "boolean", "name": "pos_FWDF", "required": true}, {"type": "boolean", "name":
+    "pos_FWMF", "required": true}, {"type": "boolean", "name": "pos_GK", "required":
+    true}, {"type": "boolean", "name": "pos_GKMF", "required": true}, {"type": "boolean",
+    "name": "pos_MF", "required": true}, {"type": "boolean", "name": "pos_MFDF", "required":
+    true}, {"type": "boolean", "name": "pos_MFFW", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2026-06-08 03:25:29.305763'
