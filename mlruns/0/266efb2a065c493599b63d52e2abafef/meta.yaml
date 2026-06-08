@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/turboaction/Desktop/SMSML_IRFAN/Workflow-CI/mlruns/0/266efb2a065c493599b63d52e2abafef/artifacts
+end_time: 1780896652106
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 266efb2a065c493599b63d52e2abafef
+run_name: rumbling-bird-103
+run_uuid: 266efb2a065c493599b63d52e2abafef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780896644135
+status: 3
+tags: []
+user_id: turboaction
