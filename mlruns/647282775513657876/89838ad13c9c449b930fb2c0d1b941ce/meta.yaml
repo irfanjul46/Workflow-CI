@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/turboaction/Desktop/Workflow-CI/mlruns/647282775513657876/89838ad13c9c449b930fb2c0d1b941ce/artifacts
+end_time: 1780893491190
+entry_point_name: ''
+experiment_id: '647282775513657876'
+lifecycle_stage: active
+run_id: 89838ad13c9c449b930fb2c0d1b941ce
+run_name: CI_CD_Automated_Training
+run_uuid: 89838ad13c9c449b930fb2c0d1b941ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780893481025
+status: 3
+tags: []
+user_id: turboaction

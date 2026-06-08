@@ -28,14 +28,13 @@ jobs:
 
       - name: Run mlflow project
         run: |
-          # Tutup run MLflow yang masih aktif sebelum memulai yang baru
-          python -c "import mlflow; mlflow.end_run()" || true
+          # Perintah untuk menjalankan mlflow run lo
           mlflow run MLProject/ --env-manager local
 
       - name: Get latest MLflow run_id
         run: |
-          # Ambil run_id terakhir dengan error handling yang aman
-          RUN_ID=$(python -c "import mlflow; runs = mlflow.search_runs(); print(runs.iloc[0]['run_id'] if not runs.empty else 'no-run')")
+          # Mengambil run_id terakhir dari hasil training MLflow lo
+          RUN_ID=$(python -c "import mlflow; print(mlflow.search_runs().iloc[0]['run_id'])")
           echo "MLFLOW_RUN_ID=$RUN_ID" >> $GITHUB_ENV
 
       - name: Install Python dependencies
