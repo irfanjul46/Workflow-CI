@@ -8,13 +8,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
 def main():
-    # 1. Pastikan jalur file konsisten
-    # Jika di dalam CI/CD file ini berada di root, maka akses langsung ke CSV
-    if not os.path.exists('football_preprocessing.csv'):
-        # Fallback jika dijalankan dari dalam subfolder
-        data_path = os.path.join('MLProject', 'preprocessing', 'football_preprocessing.csv')
-    else:
-        data_path = 'football_preprocessing.csv'
+    # Dapatkan direktori dari script ini (MLProject/)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Buat path ke file CSV yang relatif dari MLProject/
+    data_path = os.path.join(script_dir, 'preprocessing', 'football_preprocessing.csv')
+    
+    # Cek apakah file ada
+    if not os.path.exists(data_path):
+        raise FileNotFoundError(f"File tidak ditemukan di: {data_path}")
     
     df = pd.read_csv(data_path)
     
